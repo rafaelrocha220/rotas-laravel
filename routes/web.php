@@ -15,6 +15,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/', function () {
-    return view('welcome');
+
+Route::prefix('/app')->group(function(){
+    
+    Route::get('/',function(){
+        return view('home');
+    });
+
+    Route::get('/info',function(){
+        return view('info');
+    })->name('app.info');
+    
 });
