@@ -27,3 +27,5 @@ Route::prefix('/app')->group(function(){
     })->name('app.info');
     
 });
+
+Route::resource('/controller', 'Admin\rcontroller');
